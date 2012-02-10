@@ -65,7 +65,7 @@ endfunction
 
 function RunCucumberDefaultConque()
   call RunSingleConque("cucumber")
-end
+endfunction
 
 function! RunRakeConque()
   call RunSingleConque("rake")
@@ -77,5 +77,5 @@ nmap <silent> <Leader>ll :call RunRspecCurrentLineConque()<CR>
 nmap <silent> <Leader>cl :call RunCucumberCurrentLineConque()<CR>
 nmap <silent> <Leader>cc :call RunCucumberCurrentFileConque()<CR>
 nmap <silent> <Leader>RR :call RunRakeConque()<CR>
-nmap <silent> <Leader>j  :call RunCucumberWipConque
-nmap <silent> <Leader>k  :call RunCucumberDefaultConque
+nmap <silent> <Leader>j  :call RunCucumberWipConque<CR>
+nmap <silent> <Leader>k  :call RunCucumberDefaultConque<CR>
