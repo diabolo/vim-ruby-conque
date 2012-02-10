@@ -59,6 +59,14 @@ function! RunCucumberCurrentFileConque()
   call RunSingleConque("cucumber" . " " . bufname('%'))
 endfunction
 
+function RunCucumberWipConque()
+  call RunSingleConque("cucumber -p wip")
+endfunction
+
+function RunCucumberDefaultConque()
+  call RunSingleConque("cucumber")
+end
+
 function! RunRakeConque()
   call RunSingleConque("rake")
 endfunction
@@ -69,3 +77,5 @@ nmap <silent> <Leader>ll :call RunRspecCurrentLineConque()<CR>
 nmap <silent> <Leader>cl :call RunCucumberCurrentLineConque()<CR>
 nmap <silent> <Leader>cc :call RunCucumberCurrentFileConque()<CR>
 nmap <silent> <Leader>RR :call RunRakeConque()<CR>
+nmap <silent> <Leader>j  :call RunCucumberWipConque
+nmap <silent> <Leader>k  :call RunCucumberDefaultConque
